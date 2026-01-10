@@ -24,6 +24,11 @@ public class ContactController {
         return contactRepository.save(contact);
     }
 
+    @GetMapping("/")
+    public String home() {
+        return "Backend is running successfully";
+    }
+    
     // GET ALL CONTACTS (Admin panel)
     @GetMapping
     public List<Contact> getAllContacts() {
